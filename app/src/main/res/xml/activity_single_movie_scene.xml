@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnSwipe />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+
+        <Constraint
+            android:id="@+id/movie_cover"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/movie_title"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="200dp" />
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/line1"
+            android:layout_marginStart="20dp"
+            android:visibility="gone"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:id="@+id/movie_classification" />
+        <Constraint
+            android:id="@+id/linearLayout"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/line2"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="0dp" />
+        <Constraint
+            android:id="@+id/movie_user_score_value"
+            android:visibility="gone"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintTop_toTopOf="@+id/movie_user_score"
+            motion:layout_constraintStart_toStartOf="@+id/movie_duration_value" />
+        <Constraint
+            android:id="@+id/movie_user_score"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/movie_duration_value"
+            android:layout_marginStart="20dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp" />
+        <Constraint
+            android:id="@+id/movie_duration_value"
+            android:visibility="gone"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintTop_toTopOf="@+id/movie_duration"
+            motion:layout_constraintStart_toStartOf="@+id/movie_released_value" />
+        <Constraint
+            android:id="@+id/movie_duration"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/movie_released_value"
+            android:layout_marginStart="20dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp" />
+        <Constraint
+            android:id="@+id/movie_released_value"
+            android:visibility="gone"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/movie_classification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintTop_toTopOf="@+id/movie_released" />
+        <Constraint
+            android:id="@+id/movie_released"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            motion:layout_constraintTop_toBottomOf="@+id/movie_classification_value"
+            android:layout_marginStart="20dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp" />
+        <Constraint
+            android:id="@+id/movie_classification_value"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/movie_classification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            motion:layout_constraintTop_toTopOf="@+id/movie_classification" />
+        <Constraint
+            android:id="@+id/line2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="0.7dp"
+            android:layout_marginEnd="20dp"
+            motion:layout_constraintTop_toBottomOf="@+id/movie_user_score_value"
+            android:layout_marginStart="20dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp" />
+        <Constraint
+            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/movie_cover"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"
+            android:id="@+id/line1"
+            motion:layout_constraintVertical_bias="1.0" />
+
+
+<!--
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            motion:layout_constraintTop_toBottomOf="@+id/movie_cover"
+            android:layout_marginStart="20dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="100dp"
+            android:id="@+id/line1"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="50dp"
+            motion:layout_constraintVertical_bias="1.0" />
+-->
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+    </ConstraintSet>
+</MotionScene>

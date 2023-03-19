@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_single_movie_scene2">
+
+    <ImageView
+        android:id="@+id/movie_cover"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/movie_cover"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/movie_cover" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0.7dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/movie_cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/movie_cover"
+        app:layout_constraintTop_toTopOf="@+id/movie_cover" />
+
+    <com.bosphere.fadingedgelayout.FadingEdgeLayout
+        android:id="@+id/fading_edge_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:fel_edge="bottom|top"
+        app:fel_size_bottom="50dp"
+        app:fel_size_top="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/line2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:overScrollMode="never">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="20dp">
+
+
+                <TextView
+                    android:id="@+id/movie_released_value"
+                    style="@style/SectionDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="16/12/2022"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/movie_classification_value"
+                    app:layout_constraintTop_toTopOf="@+id/movie_released" />
+
+                <TextView
+                    android:id="@+id/movie_classification_value"
+                    style="@style/SectionDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Science Fiction, Adventure, Action"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/movie_classification"
+                    app:layout_constraintTop_toTopOf="@+id/movie_classification" />
+
+                <TextView
+                    android:id="@+id/movie_duration"
+                    style="@style/SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Duration: "
+                    app:layout_constraintStart_toStartOf="@+id/movie_released"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_released_value" />
+
+                <TextView
+                    android:id="@+id/movie_released"
+                    style="@style/SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Released Date: "
+                    app:layout_constraintStart_toStartOf="@+id/movie_classification"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_classification_value" />
+
+                <TextView
+                    android:id="@+id/movie_user_score_value"
+                    style="@style/SectionDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="77%"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/movie_classification_value"
+                    app:layout_constraintTop_toTopOf="@+id/movie_user_score" />
+
+                <TextView
+                    android:id="@+id/movie_title"
+                    style="@style/SectionDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="start"
+                    android:text="Avatar The Way Of Water"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/movie_classification_value"
+                    app:layout_constraintTop_toTopOf="@id/movie_name" />
+
+                <TextView
+                    android:id="@+id/movie_name"
+                    style="@style/SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Movie Name: "
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/movie_user_score"
+                    style="@style/SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="User Score: "
+                    app:layout_constraintStart_toStartOf="@+id/movie_duration"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_duration_value" />
+
+                <TextView
+                    android:id="@+id/movie_duration_value"
+                    style="@style/SectionDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="1h 8m"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/movie_classification_value"
+                    app:layout_constraintTop_toTopOf="@+id/movie_duration" />
+
+                <TextView
+                    android:id="@+id/movie_classification"
+                    style="@style/SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Movie Classification: "
+                    app:layout_constraintStart_toStartOf="@+id/movie_name"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="395dp"
+                    android:layout_height="0.7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="@+id/movie_user_score_value"
+                    app:layout_constraintStart_toStartOf="@+id/movie_user_score"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_user_score_value" />
+
+                <TextView
+                    android:id="@+id/movie_overview"
+                    style="@style/SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Overview: "
+                    app:layout_constraintStart_toStartOf="@+id/movie_user_score"
+                    app:layout_constraintTop_toBottomOf="@+id/line" />
+
+                <TextView
+                    android:id="@+id/movie_overview_value"
+                    style="@style/SectionDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:justificationMode="inter_word"
+                    android:lineHeight="20dp"
+                    android:text="@string/movie_overview"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/movie_overview"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_overview"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/movie_crew"
+                    style="@style/SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Crew: "
+                    app:layout_constraintStart_toStartOf="@+id/movie_overview_value"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_overview_value" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/director_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/james_cameron"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="1dp"
+                    app:layout_constraintStart_toStartOf="@+id/movie_crew"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_crew" />
+
+                <TextView
+                    android:id="@+id/director_name"
+                    style="@style/SectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="James Cameron"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="@+id/director_image"
+                    app:layout_constraintStart_toStartOf="@+id/director_image"
+                    app:layout_constraintTop_toBottomOf="@+id/director_image" />
+
+                <TextView
+                    android:id="@+id/director_rule"
+                    style="@style/SectionDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="(Director)"
+                    app:layout_constraintEnd_toEndOf="@+id/director_name"
+                    app:layout_constraintStart_toStartOf="@+id/director_name"
+                    app:layout_constraintTop_toBottomOf="@+id/director_name" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/screenplay_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="50dp"
+                    android:src="@drawable/josh_friedman"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="1dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/director_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/director_image" />
+
+                <TextView
+                    android:id="@+id/screenplay_name"
+                    style="@style/SectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="Josh Friedman"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="@+id/screenplay_image"
+                    app:layout_constraintStart_toStartOf="@+id/screenplay_image"
+                    app:layout_constraintTop_toBottomOf="@+id/screenplay_image" />
+
+                <TextView
+                    android:id="@+id/screenplay_rule"
+                    style="@style/SectionDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:text="(Screenplay)"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/screenplay_name"
+                    app:layout_constraintStart_toStartOf="@+id/screenplay_name"
+                    app:layout_constraintTop_toBottomOf="@+id/screenplay_name"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+    </com.bosphere.fadingedgelayout.FadingEdgeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

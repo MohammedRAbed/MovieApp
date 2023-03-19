@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MovieApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Customize your theme here. -->
+
+        <!-- Transparent Status Bar -->
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="fontFamily">@font/gotham_book</item>
+    </style>
+
+    <style name="SectionDescription">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SectionTitle" parent="SectionDescription">
+        <item name="fontFamily">@font/gotham_bold</item>
+    </style>
+</resources>

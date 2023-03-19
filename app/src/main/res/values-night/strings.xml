@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="card_title">Card Title</string>
+    <string name="slide_up_content_description">slide up to show description</string>
+    <string name="movie_cover">Movie Cover</string>
+    <string name="movie_title">Avatar The Way Of Water</string>
+    <string name="movie_overview">\tSet more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure..........</string>
+</resources>
